@@ -60,7 +60,7 @@ function rainSearch() {
 
     } else {
 
-        let cycleReq = 'http://api.openweathermap.org/data/2.5/find?lat=' + lat + 
+        let cycleReq = 'https://api.openweathermap.org/data/2.5/find?lat=' + lat + 
         '&lon=' + lon + '&cnt=50&APPID=da5415fda6c60a14d88a04b36441ed5a';
                 
         fetch(cycleReq)
