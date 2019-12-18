@@ -1,0 +1,39 @@
+html {
+  font: $font-style $font-variant $font-weight #{$font-size}/#{$line-height} $font-family;
+}
+
+p {
+  color: $light;
+  // text-shadow: 2px 2px $light;
+  position: absolute;
+  width: 100vw;
+  position: absolute;
+  top: 16vh;
+  text-align: center;
+  z-index: 10;
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px $light, 0 0 20px $med-grey, 0 0 40px $med-grey, 0 0 60px $font-color, 0 0 90px $font-color, 0 0 150px $med-grey;
+  }
+  to {
+    text-shadow: 0 0 15px $light, 0 0 30px $font-color, 0 0 40px $med-grey, 0 0 60px $med-grey, 0 0 80px $font-color, 0 0 100px $med-grey, 0 0 160px $font-color;
+  }
+}
+
+
+button {
+  margin: $margin;
+  border: 2px solid $light;
+  border-radius: 8px;
+  color: $med-purple;
+  background-color: $light; 
+  padding: 8px 16px;
+  font-size: $font-size;
+  font-family: $font-family;
+  font-style: $font-style;
+  text-decoration: none;
+  text-align: center;
+}
