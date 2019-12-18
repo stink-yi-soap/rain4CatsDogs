@@ -57,7 +57,7 @@ let s = (sk) => {
         sk.clear();
         sk.stroke(198,205,209);
         if (rainStat == true) {
-            sk.stroke(220,224,222)            ;
+            sk.stroke(220,224,222);
     
             for (let n = 0; n < 12; n++) {
                 sk.image(catsDogs[n], sk.random(0, sk.windowWidth), sk.random(-40, 900));

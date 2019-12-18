@@ -120,7 +120,7 @@ function changeBtn() {
 
     } else {
 
-        askLabel.innerHTML = "Sadly, " + cityData + "is not raining at the moment. ";
+        askLabel.innerHTML = "Sadly, " + cityData + " is not raining at the moment. ";
         refreshBtn.style.display = "inline-block";
         refreshBtn.innerHTML = "Maybe another time, another place?";
         count = 2;
