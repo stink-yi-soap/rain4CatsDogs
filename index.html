@@ -6,50 +6,75 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Rain for Cats and Dogs</title>
-  <link rel="stylesheet" href="dist/css/main.css">
+  <link rel="stylesheet" href="css/style.css"> 
   <link rel="stylesheet" href="https://use.typekit.net/yzl8oki.css">
+  <script src="js/p5.min.js"></script>
 
+  <style>
+    #mainDisplay{
+      display: none;
+    }
+    #loading{
+      display: block;
+    }
+  </style>
+  <script>
+    function myFunction(){
+      document.getElementById("main").style.display = "block";
+      document.getElementById("loading").style.display = "none";
+    }
+  </script>
 </head>
 
-<body>
+<body onload="myFunction()">
 
-  <div id="blurb">
-    <p>
-      <span id="intro">
-        Find out if your city is going to rain cats and dogs <br>
-        and hurry to your respective portals. <br><br>
-      </span>
-      <span id="note">
-        If you're not interested in raining down on humans, <br>
-        be a good neighbor and catch the dogs that fall.<br>
-        Dogs don't always land on four feet, after all. 
-      </span>
-    </p>
+  <div id="loading">
+    <h2>LOADING</h2>
   </div>
+
+
+  <div id="main">
+
+    <div id="blurb">
+      <p>
+        <span id="intro">
+          Find out if your city is going to rain cats and dogs <br>
+          and hurry to your respective portals. <br><br>
+        </span>
+        <span id="note">
+          If you're not interested in raining down on humans, <br>
+          be a good neighbor and catch the dogs that fall.<br>
+          Dogs don't always land on four feet, after all. 
+        </span>
+      </p>
+    </div>
+    
+    <div id="askBlock">
+      <form name="cityForm" action="#" id="cityForm">
+        <label for="city" id="askLabel">Type in your City Here </label>
+        <br><br>
+        <input type="text" autocomplete="off" name="city" id="city">
+        <button type="submit" id="getData">Search</button>
+      </form>
+      <button id="refresh">GO!</button>
+    </div>
   
-  <div id="askBlock">
-    <form name="cityForm" action="#" id="cityForm">
-      <label for="city" id="askLabel">Type in your City Here </label>
-      <br><br>
-      <input type="text" autocomplete="off" name="city" id="city">
-      <button type="submit" id="getData">Search</button>
-    </form>
-    <button id="refresh">GO!</button>
-  </div>
+    <div id="noti">
+  
+    </div>
+  
+  
+    <div id="ttl">
+      <h2>
+        Is it Raining Cats and Dogs? 
+      </h2>
+    </div>
 
-  <div id="noti">
-
-  </div>
-
-
-  <div id="ttl">
-    <h2>
-      Is it Raining Cats and Dogs? 
-    </h2>
   </div>
 
 
-<script src="dist/js/bundle.js"></script>
+<script src="js/main.js" type="module"></script>
+<script src="js/api.js" type="module"></script>
 
 </body>
 </html>
